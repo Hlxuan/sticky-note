@@ -9,18 +9,18 @@ function addNewNote(text = "") {
   note.classList.add("note")
 
   note.innerHTML = `
-    <div class="note">
-        <div class="tools">
-            <button class="edit">
-                <i class="fas fa-edit"></i>
-            </button>
-            <button class="delete">
-                <fas class="fas fa-trash-alt"></fas>
-            </button>
-        </div>
-
-        <div class="main ${text ? "" : "hidden"}"></div>
-        <textarea class="${text ? "hidden" : ""}"></textarea>
+    <div class="tools">
+        <button class="edit">
+            <i class="fas fa-edit"></i>
+        </button>
+        <button class="delete">
+            <fas class="fas fa-trash-alt"></fas>
+        </button>
     </div>
+
+    <div class="main ${text ? "" : "hidden"}"></div>
+    <textarea class="${text ? "hidden" : ""}"></textarea>
   `
+
+  document.body.appendChild(note)
 }
