@@ -26,6 +26,7 @@ function addNewNote(text = "") {
   const deleteBtn = note.querySelector(".delete")
   const main = note.querySelector(".main")
   const textArea = note.querySelector("textarea")
+  main.innerHTML = marked(text)
 
   deleteBtn.addEventListener("click", function () {
     note.remove()
@@ -40,7 +41,11 @@ function addNewNote(text = "") {
     const { value } = e.target
 
     main.innerHTML = marked(value)
+
+    updateLS()
   })
 
   document.body.appendChild(note)
 }
+
+function updateLS() {}
