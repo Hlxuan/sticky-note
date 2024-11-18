@@ -38,6 +38,8 @@ function addNewNote(text = "") {
 
   deleteBtn.addEventListener("click", function () {
     note.remove()
+
+    updateLS()
   })
 
   editBtn.addEventListener("click", function () {
