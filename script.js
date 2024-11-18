@@ -57,5 +57,5 @@ function updateLS() {
     notes.push(note.value)
   })
 
-  console.log(notes)
+  localStorage.setItem("notes", JSON.stringify(notes))
 }
