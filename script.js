@@ -48,4 +48,14 @@ function addNewNote(text = "") {
   document.body.appendChild(note)
 }
 
-function updateLS() {}
+function updateLS() {
+  const noteText = document.querySelectorAll("textarea")
+
+  const notes = []
+
+  noteText.forEach(function (note) {
+    notes.push(note.value)
+  })
+
+  console.log(notes)
+}
