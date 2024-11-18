@@ -2,6 +2,12 @@ const addBtn = document.getElementById("add")
 
 const notes = JSON.parse(localStorage.getItem("notes"))
 
+if (notes) {
+  notes.forEach(function (note) {
+    addNewNote(note)
+  })
+}
+
 addBtn.addEventListener("click", function () {
   addNewNote()
 })
