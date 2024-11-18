@@ -36,5 +36,7 @@ function addNewNote(text = "") {
     textArea.classList.toggle("hidden")
   })
 
+  textArea.addEventListener("input", function () {})
+
   document.body.appendChild(note)
 }
